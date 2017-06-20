@@ -19,8 +19,8 @@ module MonkeyBusiness
 
   # This is the class the end-user should be interacting with.
   class API
-    def initialize
-      @access_token = ENV['SURVEYMONKEY_ACCESS_TOKEN']
+    def initialize(token = ENV['SURVEYMONKEY_ACCESS_TOKEN'])
+      @access_token = token
     end
 
     def surveys(options = {})
